@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/active.css">
+    <style>
+        .select2 {
+            background: rgba(255, 255, 255, 0.1);
+           
+
+            width: 298px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .select2 select {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #666;
+            font-size: 16px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #666;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+
+<section style="background-image: url(../static/img/fx1.jpg);background-size: cover">
+    <div class="container" style="height: 472px;border-radius: 10px;backdrop-filter: blur(0px)">
+        <form class="form">
+            <h2 style="text-align: center">校庆活动预约</h2>
+            <div class="select2">
+                <select id="sel" onchange="choose(this);">
+                    <option selected hidden="hidden">请选择院系</option>
+                    <option value="1"> 数学与计算机科学学院2018界校友论坛</option>
+                    <option value="2">外国语学院2018界校友论坛</option>
+                    <option value="3">音乐与舞蹈学院学院2018界校友论坛</option>
+                    <option value="4">经济管理学院2018界校友论坛</option>
+                    <option value="5">文化与传播学院2018界校友论坛</option>
+                    <option value="6">食品与化工学院2018界校友论坛</option>
+                </select>
+
+
+
+
+            <div id="inputBox1" hidden="hidden">
+                <div>
+                    数学与计算机科学学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active= 数学与计算机科学学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+            <div id="inputBox2" hidden="hidden">
+                <div>
+                    外国语学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active=外国语学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+            <div id="inputBox3" hidden="hidden">
+                <div>
+                    音乐与舞蹈学院学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active=音乐与舞蹈学院学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+            <div id="inputBox4" hidden="hidden">
+                <div>
+                    经济管理学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active=经济管理学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+            <div id="inputBox5" hidden="hidden">
+                <div>
+                    文化与传播学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active=文化与传播学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+            <div id="inputBox6" hidden="hidden">
+                <div>
+                    食品与化工学院2018界校友论坛
+                </div>
+                <div>
+                    活动时间：2022-03-08 09：00：00
+                </div>
+                <div>活动地点：学校大礼堂</div>
+                <div class="box1" style="text-align: center"><a href="http://127.0.0.1:8000/apply/?active=食品与化工学院2018界校友论坛"
+                                                                style="text-decoration: none">报名</a></div>
+            </div>
+
+
+
+            <script type="text/javascript">
+                function choose(sel) {
+
+                    document.getElementById('inputBox1').style.display = 'none';
+                    document.getElementById('inputBox2').style.display = 'none';
+                    document.getElementById('inputBox3').style.display = 'none';
+                    document.getElementById('inputBox4').style.display = 'none';
+                    document.getElementById('inputBox5').style.display = 'none';
+                    document.getElementById('inputBox6').style.display = 'none';
+
+
+                    if (sel.value == '1') {
+                        document.getElementById('inputBox1').style.display = 'block';
+                    } else if (sel.value == '2') {
+                        document.getElementById('inputBox2').style.display = 'block';
+                    } else if (sel.value == '3') {
+                        document.getElementById('inputBox3').style.display = 'block';
+                    } else if (sel.value == '4') {
+                        document.getElementById('inputBox4').style.display = 'block';
+                    } else if (sel.value == '5') {
+                        document.getElementById('inputBox5').style.display = 'block';
+                    } else if (sel.value == '6') {
+                        document.getElementById('inputBox6').style.display = 'block';
+                    }
+
+
+                }
+            </script>
+        </form>
+
+    </div>
+</section>
+<script>
+    {% for msg in messages %}
+
+        alert("{{ msg.message }}");
+
+    {% endfor %}
+
+</script>
+</body>
+</html>

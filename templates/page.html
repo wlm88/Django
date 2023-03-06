@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        .a {
+            text-align: center;
+            {#background-color: #1e2350;#}
+            background-color: #68514a;
+
+            {#color: #dadae0;#}
+            color: yellow;
+            font-size: 29px;
+            width: 256px;
+            height: 40px;
+            border-radius: 15px;
+
+
+        }
+
+        body {
+            background-image: url("../static/img/manager.png")
+        }
+    </style>
+</head>
+<body>
+<div style="width: 100%;position: relative;padding-left: 716px;">
+    <div class="a"><b>校庆管理系统</b></div>
+</div>
+
+
+<script>
+    {% for msg in messages %}
+        alert("{{ msg.message }}");
+    {% endfor %}
+</script>
+
+</body>
+</html>

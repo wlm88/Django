@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/style1.css">
+</head>
+<body>
+<section style="background-image: url(../static/img/fx.jpg);background-size: cover">
+
+    <div class="container" style="height: 472px;border-radius: 10px;backdrop-filter: blur(0px)">
+        <div class="form">
+            <h2 style="text-align: center">添加自行返校预约</h2>
+            <form action="http://127.0.0.1:8000/order/" method="post" style="text-align: center">
+
+                <div class="inputBox">
+                    <div>返校日期
+                        <input type="date" name="t1" placeholder="请选择" style="width: 210px">
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <div>学院 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type="text" name="xy" placeholder="请输入"  required>
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div>学习层次
+                        <input type="text" name="cc" placeholder="请输入"  required>
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div>专业&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type="text" name="zy" placeholder="请输入"  required>
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div>入学年份
+                        <input type="date" name="t2" placeholder="请选择" style="width: 210px">
+                    </div>
+                </div>
+
+                <div class="inputBox">
+                    <div>学号&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        <input type="number" placeholder="请输入" name="num" required>
+                    </div>
+                </div>
+
+
+                <div class="inputBox" style="text-align: center ">
+                    <a href="http://127.0.0.1:8000/page" class="qu">取消</a>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input type="submit" value="保存">
+                </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+    {% for msg in messages %}
+
+        alert("{{ msg.message }}");
+
+    {% endfor %}
+
+</script>
+</body>
+</html>

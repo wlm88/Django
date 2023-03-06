@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/schedule.css">
+    <style>
+        #dv {
+
+            width: 500px;
+            padding: 40px;
+            background: #fff0f5;
+            box-sizing: border-box;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+            border-radius: 10px;
+
+        }
+
+        #btn {
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+
+<section>
+    <div class="container" style="height: 472px;border-radius: 10px;backdrop-filter: blur(0px)">
+        <form class="form" action="http://127.0.0.1:8000/leave/" method="post">
+            <h2 style="text-align: center">抵离日程</h2>
+
+
+            <div class="inputBox">
+                <a href="http://127.0.0.1:8000/reach" class="qu">创建抵达行程</a>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <input type="submit" value="创建离开行程">
+            </div>
+            <BR/>
+            <!-- <a href="http://127.0.0.1:8000/reach" class="qu">抵达</a>
+             &nbsp&nbsp
+             <a href="http://127.0.0.1:8000/leave" class="qu">离开</a>-->
+            <input type="button" value="关闭返校指南" id="btn"/>
+            <!--<input type="button" value="显示" id="btn1"/>-->
+
+            <br/>
+            <div id="dv">
+                <div>
+                    新闻记者 杨琪
+                </div>
+                <div style="text-indent:2em;">
+
+                    转眼即将开学，不少大学生已经做好了返校准备。但在大学生们满怀热情等待返校的同时，应该意识到高校学生来源地域广，人群聚集密度大，疫情传播风险不可小觑。那么大学生返校应该注意些什么呢?2月14日，湖北疾控就此发布大学生返校防疫指南。
+
+                    1、学生返校前要提前了解出发地、目的地最新防控政策及所在学校的防控要求，积极配合各地及学校的疫情防控管理。
+
+                    2、自觉申请审批和预约登记，分期分批有序返校。同时关注学校的相关通告，做到学校不批准，学生不返校。同时坚持返校前按时居家健康监测，严格落实“日报告”“零报告”制度。
+
+                    3、学生返校前除应准备好身份证、学生证、校园卡等有效证件及个人生活学习物品外，还应准备好足量的一次性使用医用口罩或医用外科口罩、一次性手套、手消毒液等个人防护用品，掌握个人防护与消毒等知识和技能。
+
+                    4、返校途中尽量减少使用人员相对密集的公共交通工具，如需乘坐公共交通工具，除进餐时，需全程佩戴一次性使用医用口罩、医用外科口罩或以上防护级别口罩。进站、等候、换乘时，注意保持人际距离。在公共交通工具上尽量减少与其他人员交流，避免聚集，与同乘者尽量保持距离。做好手卫生，尽量避免直接触摸门把手、电梯按钮等公共设施，接触后要及时洗手或用速干手消毒剂等进行擦拭清洁处理。
+                </div>
+
+
+            </div>
+
+            <script>
+
+
+                function my(id) {
+                    return document.getElementById(id);
+                }
+
+                //第一种方法
+                /*my("btn").onclick=function(){
+                    my("dv").style.display="none";
+                }
+                my("btn1").onclick=function(){
+                    my("dv").style.display="block";
+                }*/
+                //第二种方法
+                my("btn").onclick = function () {
+                    if (this.value == "关闭返校指南") {
+                        my("dv").style.display = "none";
+                        this.value = "打开返校指南";
+                    } else if (this.value == "打开返校指南") {
+                        my("dv").style.display = "block";
+                        this.value = "关闭返校指南";
+                    }
+                }
+
+
+            </script>
+
+        </form>
+    </div>
+
+</section>
+<script>
+
+    {% for msg in messages %}
+
+        alert("{{ msg.message }}");
+
+    {% endfor %}
+
+
+</script>
+
+</body>
+</html>

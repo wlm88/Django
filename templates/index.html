@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>校庆管理系统</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link rel="stylesheet" type="text/css" href="../static/css/page.css" />
+		
+		<link rel="stylesheet" href="https://lib.sinaapp.com/js/bootstrap/4.2.1/css/bootstrap.min.css">
+		
+		<link href="../static/css/icons.min.css" rel="stylesheet" type="text/css" />
+		
+	</head>
+	<body>
+		<div class="page" id="app">
+			<div class="nav-left">
+				<div class="LogoName">
+					CBT Admin System
+
+				</div>
+				<div class="navDiv">
+					<div class="navName">菜单条</div>
+					<div class="nav-list">
+						<ul>
+							<li class="nav-tab a_active waves-effect">
+								<a href="http://127.0.0.1:8000/page" class="li-a active" target="iframe"><i class='bx bx-home-smile'></i> 主页
+									<span class="badge badge-pill badge-primary float-right"></span>
+								</a>
+							</li>
+							<!-- <li class="nav-tab">
+								<a href="#" class="li-a"><i class='bx bx-home-smile'></i> 设备管理</a>
+							</li> -->
+							<li class="nav-tab nav-ul">
+								<a href="javascript:void[0]" class="li-a" target="iframe"><i class='bx bx-layer'></i> 校庆工作
+									<i class='bx bx-chevron-right' style="float: right;"></i></a>
+								<div class="nav-box">
+                                    <a href="http://127.0.0.1:8000/BS/" class="li-a-a" target="iframe">添加自行返校预约</a>
+
+{#									<a href="http://127.0.0.1:8000/hour_sum/" class="li-a-a" target="iframe">院系活动预约</a>#}
+                                    <a href="http://127.0.0.1:8000/dp_active/" class="li-a-a" target="iframe">校庆活动预约</a>
+
+									<!--<a href="http://127.0.0.1:8000/hour_people/" class="li-a-a" target="iframe">校庆活动报名</a>-->
+									<a href="http://127.0.0.1:8000/schedule/" class="li-a-a" target="iframe">抵离行程填报</a>
+									<a href="http://127.0.0.1:8000/anniversary_news" class="li-a-a" target="iframe">校庆资讯</a>
+                                    <a href="http://127.0.0.1:8000/p_data" class="li-a-a" target="iframe">我的资料</a>
+                                    <!--<a href="html/device/device.html" class="li-a-a" target="iframe">我的资料</a>-->
+									
+								</div>
+							</li>
+
+							<li class="nav-tab nav-ul">
+								<a href="javascript:void[0]" class="li-a"><i class='bx bx-cog'></i> 校庆工作分析
+									<i class='bx bx-chevron-right' style="float: right;"></i></a>
+								<div class="nav-box"> 
+									<a href="http://127.0.0.1:8000/word_colund/" class="li-a-a" target="iframe">前20专业返校预约词云图</a>
+									<a href="http://127.0.0.1:8000/word_apply/" class="li-a-a" target="iframe">前10院系活动不同用户预约数</a>
+									<a href="http://127.0.0.1:8000/word_top/" class="li-a-a" target="iframe">前10院系活动预约占比</a>
+                                    <a href="http://127.0.0.1:8000/hour_people/" class="li-a-a" target="iframe">校庆管理系统使用情况</a>
+                                    <a href="http://127.0.0.1:8000/location/" class="li-a-a" target="iframe">抵离地点位置信息展示</a>
+									<a href="http://127.0.0.1:8000/shuju/" class="li-a-a" target="iframe">日志基本数据</a>
+								</div>
+							</li>
+
+
+
+                            	<li class="nav-tab nav-ul">
+								<a href="javascript:void[0]" class="li-a"><i class='bx bx-cog'></i> 用户管理
+									<i class='bx bx-chevron-right' style="float: right;"></i></a>
+								<div class="nav-box">
+									<a href="http://127.0.0.1:8000/manager/" class="li-a-a" target="iframe">请验证管理员身份</a>
+									<a href="http://127.0.0.1:8000/search1/" class="li-a-a" target="iframe">通过名字搜索校友信息</a>
+
+								</div>
+							</li>
+
+							<!--<li class="nav-tab nav-ul">
+								<a href="javascript:void[0]" class="li-a"><i class='bx bx-buildings'></i> 用户管理
+									<i class='bx bx-chevron-right' style="float: right;"></i></a>
+								<div class="nav-box">
+									<a href="http://127.0.0.1:8000/search/" class="li-a-a" target="iframe">通过用户ID搜索相关信息</a>
+									<a href="http://127.0.0.1:8000/search1/" class="li-a-a" target="iframe">通过关键词搜索访问的用户</a>
+
+								</div>
+							</li>-->
+
+
+                            <!--<li class="nav-tab nav-ul">
+								<a href="javascript:void[0]" class="li-a"><i class='bx bx-buildings'></i> 权限设置
+									<i class='bx bx-chevron-right' style="float: right;"></i></a>
+								<div class="nav-box">
+									<a href="http://127.0.0.1:8000/search/" class="li-a-a" target="iframe">通过用户ID搜索相关信息</a>
+									<a href="http://127.0.0.1:8000/search1/" class="li-a-a" target="iframe">通过关键词搜索访问的用户</a>
+
+								</div>
+							</li>-->
+
+
+						</ul> 
+					</div>
+				</div>
+			</div>
+			<div class="nav-right"> 
+				<div class="nav-top">
+					<div ><a style="position: relative;left: 1526px" href="http://127.0.0.1:8000/login">退出登录</a></div>
+				</div>
+				<div class="content-page" style="background-image: url(../static/img/fx2.jpg);background-size: cover">
+					<iframe name="iframe" width="100%" height="100%" frameborder="0" 
+					src="http://127.0.0.1:8000/page/"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				let navflag = false;
+				$('.nav-tab').click(function() {
+					$(this).siblings().each(function() {
+						$(this).removeClass('a_active');
+						// $(this).removeClass('a_active');
+						$(this).find('.nav-box').css('height', '0')
+						//关闭右侧箭头
+						if ($(this).attr('class').indexOf('nav-ul') != -1) {
+							$(this).find('.bx-chevron-right').css('transform', 'rotateZ(0deg)')
+							$(this).find('.bx-chevron-right').css('transition', 'all .5s')
+							$(this).removeClass('nav-show')
+							// $(this).find('div').removeClass('nav-box')
+						}
+					})
+					//当前选中
+					$(this).addClass('a_active')
+					$(this).find('.li-a').addClass('active')
+					// 打开右侧箭头
+					$(this).find('.bx-chevron-right').css('transform', 'rotateZ(90deg)')
+					$(this).find('.bx-chevron-right').css('transition', 'all .5s')
+					$(this).addClass('nav-show')
+					// $(this).find('div').addClass('nav-box')
+				})
+				/* 二级菜单a点击事件 */
+				$(".li-a-a").click(function() {
+					$(".li-a-a").each(function() {
+						$(this).removeClass('active-li-a');
+					})
+					$(this).addClass('active-li-a');
+				})
+			})
+			// const vue = new Vue({
+			// 	el:'#app',
+			// 	data:{
+
+			// 	},
+			// 	methods:{
+			// 		liCli(){
+
+			// 		}
+			// 	}
+			// })
+		</script>
+	</body>
+</html>

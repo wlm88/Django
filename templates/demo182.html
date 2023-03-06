@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/echarts.js"></script>
+</head>
+<body>
+    <div id="a1" style="height: 600px; width: 900px; background-color: green"></div>
+</body>
+</html>
+<script>
+    var c1 = echarts.init(document.getElementById("a1"));
+    c1_option = {
+        title: {
+             text: "本周的气温情况",
+             left: "center",
+             link: "https:www.baidu.com",
+             textStyle: {
+                color: "red"
+             },
+        },
+        legend: {
+            top: "10%"
+        },
+        xAxis: {
+            data: ['周一', '周二', '周三', '周四', '周五']
+        },
+        yAxis: {},
+        series: [
+            {
+                name: "系列1",
+                type: "line",
+                data: {{ y }}
+            },
+
+        ],
+    };
+    c1.setOption(c1_option);
+</script>

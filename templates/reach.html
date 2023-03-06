@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/reach.css">
+</head>
+<body>
+
+<section style="background-image: url(../static/img/did.jpg);background-size: cover">
+
+    <div class="container" style="height: 472px;border-radius: 10px;backdrop-filter: blur(0px)">
+        <div class="form">
+            <h2 style="text-align: center">新增抵达信息</h2>
+            <form action="http://127.0.0.1:8000/reach1/" method="post">
+                <div class="inputBox">
+                    <input type="text" name="name" placeholder="请输入姓名" autofocus required>
+
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="card"  placeholder="请输身份证号码" autofocus required>
+
+                </div>
+                <div class="inputBox">
+                    <input type="text" id="phone" name="phone" placeholder="请输入手机号码"
+                           onkeyup="value=value.replace(/[^\d]/g,'')" autofocus required>
+                    <!--onkeyup="value=value.replace(/[^\d]/g,'')强制拒绝输入不为数字的值-->
+                </div>
+                <div class="select1">
+                    <select id="sel" name="traffic" onchange="choose(this);">
+                        <option selected hidden="hidden">请选择交通工具</option>
+                        <option value="飞机">飞机</option>
+                        <option value="火车">火车</option>
+                        <option value="大巴">大巴</option>
+                        <option value="动车">动车</option>
+                        <option value="私家车">私家车</option>
+                    </select>
+
+                </div>
+
+
+                <div class="inputBox">
+                    <input type="text" name="boarding" placeholder="备注/请输入乘车地点" autofocus required>
+
+                </div>
+
+                <div class="inputBox">
+                    <input type="text" name="station" placeholder="请输入抵达站点" autofocus required>
+
+                </div>
+
+
+
+
+                <div class="inputBox">
+                    <input type="date" name="time" placeholder="抵达时间" autofocus required>
+
+                </div>
+
+                <div class="select1">
+                    <select id="sel" name="type1" onchange="choose(this);">
+                        <option selected hidden="hidden">请选择人员类型</option>
+                        <option value="学生">学生</option>
+                        <option value="教师">教师</option>
+                    </select>
+                </div>
+
+                <div class="inputBox">
+                    <input type="submit" value="确定">
+
+                </div>
+
+                <p class="forget">已经填写<a href="http://127.0.0.1:8000/page">
+                    返回
+                </a></p>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+
+    {% for msg in messages %}
+
+        alert("{{ msg.message }}");
+
+    {% endfor %}
+
+
+</script>
+
+</body>
+</html>

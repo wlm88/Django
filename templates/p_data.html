@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>校庆管理系统</title>
+
+    <style>
+
+        html {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: -1px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        td,
+        th {
+
+            border: 1px solid rgb(190, 190, 190);
+            padding: 21px 13px;
+        }
+
+        th {
+            background-color: rgb(235, 235, 235);
+        }
+
+        td {
+            text-align: center;
+        }
+
+        tr:nth-child(even) td {
+            background-color: rgb(250, 250, 250);
+        }
+
+        tr:nth-child(odd) td {
+            background-color: rgb(245, 245, 245);
+        }
+
+        caption {
+            padding: 10px;
+        }
+
+        .add {
+            text-decoration: none;
+            background: pink;
+            border-radius: 10px;
+            padding: 10px;
+            font-weight: 600;
+        }
+
+        .a1 {
+            margin-bottom: 18px;
+
+        }
+
+        .bj {
+            text-decoration: none;
+        }
+
+        .dt {
+            text-decoration: none;
+        }
+
+        .border {
+            width: 50%;
+            height: 750px;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #f1f4f9, #79a5f3);
+
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            position: relative;
+            text-align: center;
+
+
+
+        }
+
+        .border1 {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background: linear-gradient(to bottom, #60a9ef, #63a8ff);
+            padding: 40px;
+            box-sizing: border-box;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .image {
+            width: 80px;
+            height: 80px;
+            margin-right: 46px;
+            margin-left: -56px;
+
+
+        }
+
+
+        .a1 {
+            display: inline-block;
+
+        }
+
+        .s{
+            display: inline-block;
+        }
+
+        .ce {
+            position:absolute;
+            bottom:5%;
+            left:50%;
+            transform:translate(-50%);
+
+
+        }
+
+        .image1 {
+
+            {#position: absolute;#}
+            width: 200px;
+            height: 200px;
+            {#transform: translate(-50%);#}
+
+
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="border1">我的电子牌</div>
+<br/>
+
+<div class="border">
+    <table class="table table-bordered">
+           <table class="ce" margin:auto>
+        <div class="a1">
+            <img class="image" src="../static/img/dzp.png"><span style="font-size: 2em;font-style: oblique;margin-left: -13px">广西科技师范学院</span>
+        </div>
+
+{% for i in a %}
+        <div style="text-align: center;font-size: 2em;color: #af9c9c;font-weight: bold">{{ i.username }}</div>
+     {% endfor %}
+        <div style="text-align: center; font-size: 2em;color: #fcfcfc">返校校友入园码</div>
+        <div>
+            <img class="image1" src="../static/img/code.png">
+        </div>
+
+
+        <h1 style="text-align: center;color: #f1efef">用户信息展示</h1>
+
+
+            <tr>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>电话</th>
+                <th>邮件</th>
+                <th>操作</th>
+            </tr>
+
+
+
+
+        {% for i in a %}
+            <tr>
+                <td>{{ i.username }}</td>
+                <td>{{ i.passwd }}</td>
+                <td>{{ i.telephone }}</td>
+                <td>{{ i.email }}</td>
+                <td>
+                    <a class="bj" href="http://127.0.0.1:8000/edit1/?username={{ i.username }}">编辑</a>
+
+                </td>
+            </tr>
+        {% endfor %}
+</table>
+    </table>
+</div>
+
+
+</body>
+</html>

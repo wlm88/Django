@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang = "en" >
+<head>
+<meta charset = "UTF-8" >
+<title> Title </title >
+</head>
+<body>
+<div id="app">
+<input v-model="username">
+<!--插值表达式 -->
+{{username}}
+</div>
+<script src = "js/vue.js"></script >
+<script>
+// 1.
+创建Vue核心对象
+new Vue({
+el: "#app",
+data(){ // data() 是 ECMAScript 6 版本的新的写法
+return {
+username: "xuesheng"
+ }
+}
+});
+</script>
+</body>
+</html >

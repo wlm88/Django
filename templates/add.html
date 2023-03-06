@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <title>校庆管理系统系统</title>
+</head>
+
+<body >
+    <section style="background-image: url(../static/img/add.jpg);background-size: cover">
+
+            <div class="container" style="height: 472px;border-radius: 10px;backdrop-filter: blur(0px)">
+                <div class="form">
+                    <h2 style="padding-left: 110px">添加用户</h2>
+                    <form action="http://127.0.0.1:8000/add1/" method="post">
+                        <div class="inputBox">
+                            <input type="text"  name="username" placeholder="请输入新用户名" autofocus required>
+
+                        </div>
+                        <div class="inputBox">
+                            <input type="password" placeholder="请输入密码" name="password" required >
+
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="phone" name="phone" placeholder="请输入号码" onkeyup="value=value.replace(/[^\d]/g,'')" autofocus required>
+                 <!--onkeyup="value=value.replace(/[^\d]/g,'')强制拒绝输入不为数字的值-->
+                        </div>
+                        <div class="inputBox">
+                            <input type="text"  name="email"  placeholder="请输入Email" autofocus required>
+
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="确定">
+
+                        </div>
+
+                        <p class="forget">该用户已存在<a href="http://127.0.0.1:8000/add">
+                                重新输入
+                            </a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+  <script>
+          {% for msg in messages %}
+             alert("{{ msg.message }}");
+          {% endfor %}
+
+    </script>
+</body>
+
+</html>
